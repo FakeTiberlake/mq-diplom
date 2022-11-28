@@ -1,0 +1,240 @@
+@font-face {
+
+    font-family: OpenSans-Regular;
+    src: url(fonts\OpenSans-Regular.ttf);
+    src: url(fonts\OpenSans-Regular.woff);
+    src: url(fonts\OpenSans-Regular.woff2);
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family: "OpenSans-Bold";
+    src: url("fonts\OpenSans-Bold.ttf");
+    src: url("fonts\OpenSans-Bold.woff");
+    src: url("fonts\OpenSans-Bold.woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+.container {
+
+    width: 1660px;
+    height: 3500px;
+    background-color: lightcyan;
+    /* замени потом на #ffffff;  */
+}
+
+/* shop */
+
+.shop {
+
+    width: 1170px;
+    height: 563px;
+    display: flex;
+    margin-left: 245px;
+    margin-right: 245px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.shop-title {
+
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    justify-content: center;
+    position: relative;
+    margin-top: 64px;
+    margin-bottom: 14px;
+    color: #0f0d0e;
+    
+
+}
+
+/* Выровнять относительно родителя!!!! */
+.shop__title::after {
+
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 3px;
+    opacity: 0.4;
+    background-color: #e1d9bd;
+    left: 50%;
+    /* margin-left: 52px; */
+
+}
+
+.products {
+
+    display: flex;
+    margin-top: 29px;
+
+}
+
+.product-picture {
+
+    width: 300px;
+    height: 200px;
+    padding-left: 20px;  
+
+}
+
+.product-content {
+
+    width: 345px;
+    height: 260px;
+    box-sizing: border-box;
+    border: 3px solid rgba(193,183,141,0.6);
+    padding-left: 20px;
+    padding-right: 20px;
+        
+}
+
+.product-content:nth-child(n+1) {
+    
+    margin-right: 65px;
+
+}
+
+.product-name {
+
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+   
+}
+
+.product-description {
+
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 8px;
+    line-height: 14px;
+    color: #0f0d0e;
+
+}
+
+.product-description:hover {
+
+    font-weight: bold;
+
+}
+
+.product-link {
+
+    color: #cabb92;
+    text-decoration: none;
+}
+
+.product-link:hover {
+
+    text-decoration: underline;
+
+}
+
+.product-footer {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+}
+
+.product-prices {
+    font-family: OpenSans-Bold, sans-serif;
+    top: 8px;
+}
+
+.product-old-price {
+
+    font-size: 11px;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+    
+
+}
+
+.product-new-price {
+
+     font-size: 15px;
+
+}
+
+.product-button {
+
+    width: 140px;
+    height: 50px;
+    background-color: #b59f5b;
+    border-radius: none;
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+
+/* footer */
+
+.footer {
+    
+    width: 1170px;
+    height: 277px;
+    margin-left: 245px;
+    margin-right: 245px;
+    padding-top: 64px;
+    padding-bottom: 47px;
+
+}
+
+.socials {
+
+    width: 1170px;
+    height: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f7f6;
+
+}
+
+.socials-links {
+
+    height: 20px;
+
+}
+
+.socials__links_dribbble {
+
+    width: 20px;
+
+}
+
+.socials__links_pinterest {
+
+    width: 16px;
+    margin-left: 30px;
+
+}
+
+.socials__links_tumblr {
+
+    width: 13px;
+    margin-left: 30px;
+
+}
+
+.copyrights {
+
+    margin-top: 73px;
+    margin-bottom: 44px;
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 8px;
+    color: #999999;
+    text-align: center;
+
+}
