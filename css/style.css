@@ -11,10 +11,10 @@
 
 @font-face {
 
-    font-family: "OpenSans-Bold";
-    src: url("fonts\OpenSans-Bold.ttf");
-    src: url("fonts\OpenSans-Bold.woff");
-    src: url("fonts\OpenSans-Bold.woff2");
+    font-family: OpenSans-Bold;
+    src: url(fonts\OpenSans-Bold.ttf);
+    src: url(fonts\OpenSans-Bold.woff);
+    src: url(fonts\OpenSans-Bold.woff2);
     font-weight: bold;
     font-style: normal;
 }
@@ -25,6 +25,186 @@
     height: 3500px;
     background-color: lightcyan;
     /* замени потом на #ffffff;  */
+}
+
+/* header */
+
+.header {
+
+    width: 1660px;
+    height: 450px;
+    background-image: url("..\images\banner-bg.jpg");
+    background-color: #666666;
+    background-repeat: no-repeat;
+    /* background-position: center 50%; */
+    background-size: cover;
+  }
+
+
+.logo {
+
+    width: 179px;
+    height: 41px;
+
+}
+
+.top-panel__container {
+
+    display: flex;
+    width: 1170px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 245px;
+    margin-right: 245px;
+    
+
+}
+
+.menu {
+
+    display: flex;
+    width: 464px;
+    height: 30px;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+
+}
+
+.menu__list {
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+
+}
+
+.menu__list-item {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    
+}
+
+.menu__list-item::nth-child(n+2) {
+
+    margin-left: 28px ;
+}
+
+
+.menu__link {
+
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.menu__link:hover {
+
+    text-decoration: underline;
+    color: #ffffff;
+    
+}
+
+.header-container {
+
+    width: 1170px;
+    display: flex;
+    margin-left: 245px;
+    margin-right: 245px;
+    
+}
+
+.header__slogan {
+
+    width: 686px;
+    height: 128px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header-title {
+
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 33px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+}
+
+/* trends */
+
+.trends {
+
+    width: 1660px;
+    height: 442px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.trends-title-container {
+    
+    width: 1660px;
+    height: 123px;
+
+}
+
+.trends-title {
+
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 20px;
+    line-height: 29px;
+    text-transform: uppercase;
+    justify-content: center;
+    position: relative;
+    margin-top: 29px;
+    margin-bottom: 40px;
+    color: #0f0d0e;
+}
+
+.trends-title:after {
+
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 3px;
+    opacity: 0.4;
+    background-color: #e1d9bd;
+}
+
+.trend-posts {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.trend-img {
+
+    width: 410px;
+    height: 320px;
+    position: relative;
+    z-index: 0;
+}
+
+.trend-img:after {
+
+    content: "";
+    display: flex;
+    position: absolute;
+    width: 410px;
+    height: 320px;
+    opacity: 0.6;
+    background-color: #0f0d0e;
+    z-index: 1;
+
 }
 
 /* shop */
@@ -44,7 +224,8 @@
 .shop-title {
 
     font-family: OpenSans-Bold, sans-serif;
-    font-size: 14px;
+    font-size: 20px;
+    line-height: 29px;
     text-transform: uppercase;
     justify-content: center;
     position: relative;
@@ -84,27 +265,38 @@
 
 }
 
-.product-content {
+.product-card {
 
     width: 345px;
     height: 260px;
-    box-sizing: border-box;
     border: 3px solid rgba(193,183,141,0.6);
-    padding-left: 20px;
-    padding-right: 20px;
-        
+
 }
 
-.product-content:nth-child(n+1) {
+.product-card:nth-child(n+1) {
     
     margin-right: 65px;
 
 }
 
+.product-content {
+
+    /* width: 345px;
+    height: 260px; */
+    box-sizing: border-box;
+    /* border: 3px solid rgba(193,183,141,0.6); */
+    padding-left: 20px;
+    padding-right: 20px;
+        
+}
+
+
+
 .product-name {
 
     font-family: OpenSans-Bold, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
+    line-height: 24px;
     text-transform: uppercase;
     color: #0f0d0e;
    
@@ -113,8 +305,8 @@
 .product-description {
 
     font-family: OpenSans-Regular, sans-serif;
-    font-size: 8px;
-    line-height: 14px;
+    font-size: 15px;
+    line-height: 22px;
     color: #0f0d0e;
 
 }
@@ -151,8 +343,9 @@
 
 .product-old-price {
 
-    font-size: 11px;
+    font-size: 14px;
     text-decoration: line-through;
+    line-height: 24px;
     margin-bottom: 5px;
     
 
@@ -160,7 +353,8 @@
 
 .product-new-price {
 
-     font-size: 15px;
+     font-size: 20px;
+     line-height: 24px;
 
 }
 
@@ -171,8 +365,8 @@
     background-color: #b59f5b;
     border-radius: none;
     font-family: OpenSans-Bold, sans-serif;
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
     color: #ffffff;
     text-transform: uppercase;
 }
@@ -233,7 +427,8 @@
     margin-top: 73px;
     margin-bottom: 44px;
     font-family: OpenSans-Bold, sans-serif;
-    font-size: 8px;
+    font-size: 12px;
+    line-height: 40px;
     color: #999999;
     text-align: center;
 

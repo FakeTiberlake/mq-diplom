@@ -6,19 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css\normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="container">
 
-    <header class="header"></header>
-    <section class="trends"></section>
+    <header class="header">
+        <div class="top-panel">
+            <div class="top-panel__container">
+                <img class="logo" src="svg\noemi-logo.svg" alt="Логотип компании Noemi">
+                <nuv class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#" >Главная</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#" >Посты</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#" >Статьи</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#" >Теги</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#" >Темы</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__link" href="#" >Контакты</a>
+                        </li>
+                    </ul>
+                </nuv>
+            </div>
+        </div>
+        <div class="header-container">
+            <div class="header__slogan">
+                <h1 class="header-title">Блог о творчестве, спорте, и образе жизни</h1>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="trends">
+        <div class="trends-title-container">
+            <h2 class="trends-title">Сейчас в тренде</h2>
+        </div>
+        <div class="trend-posts">
+            <article class="trend-post">
+                <img src="images\trend1.jpg" alt="Сад на подоконнике" class="trend-img">
+                <div class="trend-categories">
+                    <ul class="trend-category">
+                        <li class="trend-category__item">Lifestyle</li>
+                        <li class="trend-category__item">Interior</li>
+                    </ul>
+                </div>
+                <div class="trend-title">
+                    <h3 class="trend-title__item">Сейчас в тренде: сад на подоконнике</h3>
+                </div>
+            </article>
+
+            <article class="trend-post">
+                <img src="images\trend2.jpg" alt="Сыры на картинках из интернета" class="trend-img">
+                <div class="trend-categories">
+                    <ul class="trend-category">
+                        <li class="trend-category__item">Food</li>
+                    </ul>
+                </div>
+                <div class="trend-title">
+                    <h3 class="trend-title__item">Cыры на красивых картинках из интернета: какие они на вкус?</h3>
+                </div>
+            </article>
+
+            <article class="trend-post">
+                <img src="images\trend3.jpg" alt="Первый поход в горы" class="trend-img">
+                <div class="trend-categories">
+                    <ul class="trend-category">
+                        <li class="trend-category__item">Lifestyle</li>
+                        <li class="trend-category__item">Travel</li>
+                    </ul>
+                </div>
+                <div class="trend-title">
+                    <h3 class="trend-title__item">Собираемся в первый поход в горы</h3>
+                </div>
+                </article>
+
+            <article class="trend-post">
+                <img src="images\trend4.jpg" alt="Свежие лимоны" class="trend-img">
+                <div class="trend-categories">
+                    <ul class="trend-category">
+                        <li class="trend-category__item">Food</li>
+                        <li class="trend-category__item">Health</li>
+                    </ul>
+                </div>
+                <div class="trend-title">
+                    <h3 class="trend-title__item">Сейчас в тренде: сколько витамина С в лимонах?</h3>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <section class="post-list"></section>
     <aside class="sidebar"></aside>
 
     <section class="shop">
         <div class="shop-title">
-            <h3>Наши изделия</h3>
+            <h8>Наши изделия</h8>
         </div>
         <div class="products">
 
@@ -26,7 +118,7 @@
                     <img class="product-picture" src="images\shop-item-desk1.jpg" alt="Товар в магазине: Подушки на диван">
                     <div class="product-card">
                     <div class="product-content">
-                        <h4 class="product-name">Подушки на диван</h4>
+                        <h9 class="product-name">Подушки на диван</h9>
                         <p class="product-description">Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="product-link">здесь</a>.</p>
                         <div class="product-footer">
                             <div class="product-prices">
@@ -81,13 +173,13 @@
         <div class="socials">
             <address class="socials socials__links">
                 <a href="#" class="socials socials__links_dribbble">
-                    <img src="svg\001-dribbble.svg" alt="Логотип социальной сети Dribbble" class="logo">
+                    <img src="svg\001-dribbble.svg" alt="Логотип социальной сети Dribbble" class="socials-logo">
                 </a>
                 <a href="#" class="socials socials__links_pinterest">
-                    <img src="svg\001-pinterest.svg" alt="Логотип социальной сети Pinterest" class="logo">
+                    <img src="svg\001-pinterest.svg" alt="Логотип социальной сети Pinterest" class="socials-logo">
                 </a>
                 <a href="#" class="socials socials__links_tumblr">
-                    <img src="svg\003-tumblr.svg" alt="Логотип социальной сети Tumblr" class="logo">
+                    <img src="svg\003-tumblr.svg" alt="Логотип социальной сети Tumblr" class="socials-logo">
                 </a>
             </address>
         </div>
