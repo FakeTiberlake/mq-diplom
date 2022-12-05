@@ -149,41 +149,49 @@
 
 }
 
-.trends-title-container {
-    
-    width: 1660px;
-    height: 123px;
-
-}
-
 .trends-title {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
+    font-weight: bold;
     line-height: 29px;
     text-transform: uppercase;
-    justify-content: center;
     position: relative;
     margin-top: 29px;
-    margin-bottom: 40px;
+    margin-bottom: 12px;
     color: #0f0d0e;
 }
 
-.trends-title:after {
+.trends-title:after { 
+    /* выровнять относительно родителя!!! */
 
     content: "";
     position: absolute;
     width: 67px;
     height: 3px;
     opacity: 0.4;
-    background-color: #e1d9bd;
+    background-color: #ae9e5f;
+    margin-bottom: 28px;
 }
 
 .trend-posts {
 
     display: flex;
-    justify-content: space-between;
 
+}
+
+.trend_post {
+
+    width: 410px;
+    height: 320px;
+    display: block;
+    position: relative;
+
+}
+
+.trend_post:nth-child(n+2) {
+
+    margin-left: 4px;
 }
 
 .trend-img {
@@ -206,6 +214,152 @@
     z-index: 1;
 
 }
+#a39459
+
+.trends-content {
+
+    width: 370px;
+    height: 146px;
+    border: 3px solid rgba(174,158,95,0.6);
+}
+
+/* post-list */
+
+.posts-list {
+
+    width: 775px;
+    height: 1712px;
+    display: block;
+    margin-top: 65px;
+    margin-left: 245px;
+
+}
+
+.post-list {
+
+    width: 775px;
+    height: 295px;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.post-list:nth-child(n+2) {
+
+    margin-top: 62px;
+}
+
+.post-list__item {
+
+    display: block;
+
+}
+
+.post-list__img {
+
+    width: 380px;
+    height: 295px;
+    
+}
+
+.post-list__item {
+
+    margin-left: 31px;
+
+}
+
+.post-head {
+
+    display: block;
+    
+}
+
+.post-tag {
+     
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+
+}
+
+.post-tag__item {
+
+    font-family: OpenSans-Bold, sans-serif;
+    color: #ae9e5f;
+    font-size: 14px;
+    font-weight: bold;
+    list-style-type: none;
+    text-transform: uppercase; 
+
+}
+
+.post-tag__item:nth-child(n+2) {
+
+    margin-left: 20px;
+
+}
+
+.post-tag__item:hover {
+
+    text-decoration: underline;
+    font-weight: bolder;
+
+}
+
+.post-title {
+
+    font-family: OpenSans-Bold, sans-serif;
+    color: #161516;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 37px;
+    
+}
+
+.post-title:hover {
+
+    font-weight: bolder;
+}
+
+.post-inform {
+
+    display: flex;
+    margin-bottom: 55px;
+
+}
+
+.post-date {
+
+    font-family: OpenSans-Regular, sans-serif;
+    color: #888888;
+    font-size: 12px;
+    
+}
+
+.post-author {
+
+    font-family: OpenSans-Bold, sans-serif;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 15px;
+
+}
+
+.post-description {
+
+    font-family: OpenSans-Regular, sans-serif;
+    color: #161516;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0;
+    
+}
+
 
 /* shop */
 
@@ -225,12 +379,13 @@
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
+    font-weight: bold;
     line-height: 29px;
     text-transform: uppercase;
     justify-content: center;
     position: relative;
-    margin-top: 64px;
-    margin-bottom: 14px;
+    margin-top: 65px;
+    margin-bottom: 15px;
     color: #0f0d0e;
     
 
@@ -244,7 +399,7 @@
     width: 67px;
     height: 3px;
     opacity: 0.4;
-    background-color: #e1d9bd;
+    background-color: #ae9e5f;
     left: 50%;
     /* margin-left: 52px; */
 
@@ -269,7 +424,7 @@
 
     width: 345px;
     height: 260px;
-    border: 3px solid rgba(193,183,141,0.6);
+    border: 3px solid rgba(174,158,95,0.6);
 
 }
 
@@ -284,7 +439,7 @@
     /* width: 345px;
     height: 260px; */
     box-sizing: border-box;
-    /* border: 3px solid rgba(193,183,141,0.6); */
+    /* border: 3px solid rgba(174,158,95,0.6); */
     padding-left: 20px;
     padding-right: 20px;
         
@@ -296,6 +451,7 @@
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
+    font-weight: bold;
     line-height: 24px;
     text-transform: uppercase;
     color: #0f0d0e;
