@@ -180,47 +180,109 @@
 
 }
 
-.trend_post {
+.trend-post {
 
     width: 410px;
     height: 320px;
-    display: block;
+    /* display: block; */
     position: relative;
+    background-color: #606260;
+    z-index: 0;
 
 }
 
-.trend_post:nth-child(n+2) {
+/* .trend-post:nth-child(n+2) {
 
     margin-left: 4px;
-}
+} */
 
-.trend-img {
-
-    width: 410px;
-    height: 320px;
-    position: relative;
-    z-index: 0;
-}
-
-.trend-img:after {
+.trend-post:after {
 
     content: "";
-    display: flex;
     position: absolute;
-    width: 410px;
-    height: 320px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     opacity: 0.6;
     background-color: #0f0d0e;
     z-index: 1;
 
 }
-#a39459
 
-.trends-content {
+.trend-img {
 
-    width: 370px;
-    height: 146px;
+    width: 414px;
+    height: 320px;
+    position: relative;
+    
+}
+
+.trend-content {
+
+    /* width: 370px;
+    height: 146px; */
     border: 3px solid rgba(174,158,95,0.6);
+    position: absolute;
+    /* top: 157px; */
+    right: 22px;
+    bottom: 16px;
+    left: 18px;
+    z-index: 2;
+    padding-left: 32px;
+
+}
+
+.trend-tag {
+     
+    display: flex;
+    justify-content: start;
+    margin-top: 38px;
+    padding: 0;
+
+}
+
+.trend-tag__item {
+
+    font-family: OpenSans-Bold, sans-serif;
+    color: #ae9e5f;
+    font-size: 14px;
+    font-weight: bold;
+    list-style-type: none;
+    text-transform: uppercase; 
+
+}
+
+.trend-tag__item:nth-child(n+2) {
+
+    margin-left: 20px;
+
+}
+
+.trend-tag__item:hover {
+
+    text-decoration: underline;
+    font-weight: bolder;
+
+}
+
+.trend-name {
+
+    font-family: OpenSans-Bold, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-top: 11px;
+    margin-bottom: 32px;
+    margin-right: 96px;
+    
+}
+
+.trend-name:hover {
+
+    font-weight: bolder;
 }
 
 /* post-list */
@@ -314,7 +376,6 @@
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
-    text-align: left;
     margin-top: 15px;
     margin-bottom: 37px;
     
