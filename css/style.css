@@ -144,8 +144,10 @@
     width: 1660px;
     height: 442px;
     display: flex;
+    align-items: flex-end;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0;
 
 }
 
@@ -154,47 +156,55 @@
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    line-height: 29px;
     text-transform: uppercase;
-    position: relative;
-    margin-top: 29px;
-    margin-bottom: 12px;
     color: #0f0d0e;
+
+    position: relative;
+    margin-top: 63px;
+    margin-bottom: 41px;
+    
 }
 
 .trends-title:after { 
-    /* выровнять относительно родителя!!! */
 
     content: "";
-    position: absolute;
     width: 67px;
     height: 3px;
+
+    position: absolute;
+    top: 33px;
+    right: 62px;
+
     opacity: 0.4;
     background-color: #ae9e5f;
-    margin-bottom: 28px;
+    /* margin-top: 10px; */
 }
 
 .trend-posts {
 
+    width: 1660px;
+    height: 320px;
     display: flex;
 
 }
 
 .trend-post {
 
-    width: 410px;
+    width: 412px;
     height: 320px;
-    /* display: block; */
+    display: flex;
+    justify-content: space-between;
     position: relative;
     background-color: #606260;
     z-index: 0;
-
+    
 }
 
-/* .trend-post:nth-child(n+2) {
+.trend-post:nth-child(n+2) {
 
     margin-left: 4px;
-} */
+
+}
 
 .trend-post:after {
 
@@ -214,17 +224,14 @@
 
     width: 414px;
     height: 320px;
-    position: relative;
     
 }
 
 .trend-content {
 
-    /* width: 370px;
-    height: 146px; */
+    width: 371px;
     border: 3px solid rgba(174,158,95,0.6);
     position: absolute;
-    /* top: 157px; */
     right: 22px;
     bottom: 16px;
     left: 18px;
@@ -276,7 +283,7 @@
     text-transform: uppercase;
     margin-top: 11px;
     margin-bottom: 32px;
-    margin-right: 96px;
+    /* margin-right: 96px; */
     
 }
 
@@ -291,7 +298,9 @@
 
     width: 775px;
     height: 1712px;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
     margin-top: 65px;
     margin-left: 245px;
 
@@ -321,6 +330,7 @@
 
     width: 380px;
     height: 295px;
+    background-color: #f1f6f1;
     
 }
 
@@ -428,11 +438,15 @@
 
     width: 1170px;
     height: 563px;
+
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+
     margin-left: 245px;
     margin-right: 245px;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-bottom: 67px;
 
 }
 
@@ -441,35 +455,50 @@
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    line-height: 29px;
     text-transform: uppercase;
-    justify-content: center;
     position: relative;
-    margin-top: 65px;
-    margin-bottom: 15px;
+    margin-top: 63px;
+    margin-bottom: 41px;
     color: #0f0d0e;
     
-
 }
 
-/* Выровнять относительно родителя!!!! */
-.shop__title::after {
+.shop-title::after {
 
     content: "";
-    position: absolute;
     width: 67px;
     height: 3px;
+
+    position: absolute;
+    top: 33px;
+    right: 52px;
+
     opacity: 0.4;
     background-color: #ae9e5f;
-    left: 50%;
-    /* margin-left: 52px; */
 
 }
 
 .products {
 
     display: flex;
-    margin-top: 29px;
+    width: 1170px;
+    height: 440px;
+    
+
+}
+
+.product {
+
+    display: flex;
+    width: 440px;
+    height: 348px;
+    position: relative;
+
+}
+
+.product:nth-child(n+2) {
+    
+    margin-left: 60px;
 
 }
 
@@ -477,43 +506,37 @@
 
     width: 300px;
     height: 200px;
-    padding-left: 20px;  
+    position: absolute;
+    top: 0;
+    left: 23px;
 
 }
 
 .product-card {
 
     width: 345px;
-    height: 260px;
+    height: 270px;
     border: 3px solid rgba(174,158,95,0.6);
-
-}
-
-.product-card:nth-child(n+1) {
-    
-    margin-right: 65px;
+    position: absolute;
+    top: 173px;
+    left: 0;
 
 }
 
 .product-content {
 
-    /* width: 345px;
-    height: 260px; */
     box-sizing: border-box;
-    /* border: 3px solid rgba(174,158,95,0.6); */
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 57px;
         
 }
-
-
 
 .product-name {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    line-height: 24px;
     text-transform: uppercase;
     color: #0f0d0e;
    
@@ -562,7 +585,6 @@
 
     font-size: 14px;
     text-decoration: line-through;
-    line-height: 24px;
     margin-bottom: 5px;
     
 
@@ -571,7 +593,6 @@
 .product-new-price {
 
      font-size: 20px;
-     line-height: 24px;
 
 }
 
@@ -583,7 +604,6 @@
     border-radius: none;
     font-family: OpenSans-Bold, sans-serif;
     font-size: 14px;
-    line-height: 40px;
     color: #ffffff;
     text-transform: uppercase;
 }
@@ -594,21 +614,29 @@
 .footer {
     
     width: 1170px;
-    height: 277px;
+    height: 213px;
+
     margin-left: 245px;
     margin-right: 245px;
-    padding-top: 64px;
-    padding-bottom: 47px;
+    padding-top: 0;
+    padding-bottom: 0;
 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .socials {
 
     width: 1170px;
     height: 83px;
-    display: flex;
+
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+
     background-color: #f4f7f6;
 
 }
@@ -616,36 +644,44 @@
 .socials-links {
 
     height: 20px;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
 
 }
 
-.socials__links_dribbble {
+.socials-logo:nth-child(n+2) {
+
+    margin-left: 30px;
+
+}
+
+.socials-links__dribbble {
 
     width: 20px;
 
 }
 
-.socials__links_pinterest {
+.socials-links__pinterest {
 
     width: 16px;
-    margin-left: 30px;
 
 }
 
-.socials__links_tumblr {
+.socials-links__tumblr {
 
     width: 13px;
-    margin-left: 30px;
 
 }
 
 .copyrights {
 
-    margin-top: 73px;
-    margin-bottom: 44px;
+    padding-top: 74px;
+    padding-bottom: 44px;
+    
     font-family: OpenSans-Bold, sans-serif;
     font-size: 12px;
-    line-height: 40px;
+    font-weight: bold;
     color: #999999;
     text-align: center;
 
