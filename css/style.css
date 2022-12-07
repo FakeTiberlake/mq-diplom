@@ -1,9 +1,9 @@
 @font-face {
 
     font-family: OpenSans-Regular;
-    src: url(fonts\OpenSans-Regular.ttf);
-    src: url(fonts\OpenSans-Regular.woff);
-    src: url(fonts\OpenSans-Regular.woff2);
+    src: url(../fonts/OpenSans-Regular.ttf);
+    src: url(../fonts/OpenSans-Regular.woff);
+    src: url(../fonts/OpenSans-Regular.woff2);
     font-weight: normal;
     font-style: normal;
 
@@ -12,9 +12,9 @@
 @font-face {
 
     font-family: OpenSans-Bold;
-    src: url(fonts\OpenSans-Bold.ttf);
-    src: url(fonts\OpenSans-Bold.woff);
-    src: url(fonts\OpenSans-Bold.woff2);
+    src: url(../fonts/OpenSans-Bold.ttf);
+    src: url(../fonts/OpenSans-Bold.woff);
+    src: url(../fonts/OpenSans-Bold.woff2);
     font-weight: bold;
     font-style: normal;
 }
@@ -23,8 +23,8 @@
 
     width: 1660px;
     height: 3500px;
-    background-color: lightcyan;
-    /* замени потом на #ffffff;  */
+    /* background-color: #ffffff; */
+
 }
 
 /* header */
@@ -33,108 +33,131 @@
 
     width: 1660px;
     height: 450px;
-    background-image: url("..\images\banner-bg.jpg");
-    background-color: #666666;
+    display: flex;
+    
+    background-image: url(../images/banner-bg.jpg);
     background-repeat: no-repeat;
-    /* background-position: center 50%; */
+    background-position: center center;
     background-size: cover;
+
+    position: relative;
+    z-index: -1;
+
   }
 
+.header::after {
+
+    content: "";
+    width: 1660px;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: 0;
+
+}
+
+.top-panel {
+
+    width: 1170px;
+    height: 69px;
+    margin-right: 245px;
+    margin-left: 245px;
+
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    
+    position: absolute;
+    z-index: 1;  
+
+}
 
 .logo {
 
     width: 179px;
     height: 41px;
-
-}
-
-.top-panel__container {
-
-    display: flex;
-    width: 1170px;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 245px;
-    margin-right: 245px;
-    
+    margin-top: 28px;
 
 }
 
 .menu {
 
-    display: flex;
     width: 464px;
     height: 30px;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-
+    margin-top: 45px;
+    
 }
 
-.menu__list {
+.menu-list {
 
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 
 }
 
-.menu__list-item {
-    display: inline-block;
-    vertical-align: middle;
+.menu-list__item {
     font-family: OpenSans-Regular, sans-serif;
     font-size: 13px;
-    text-transform: uppercase;
+    text-transform: uppercase;  
     
 }
 
-.menu__list-item::nth-child(n+2) {
+.menu-list__item:nth-child(n+2) {
 
-    margin-left: 28px ;
+    margin-left: 28px;
 }
 
-
-.menu__link {
+.menu-link {
 
     text-decoration: none;
     color: #ffffff;
 
 }
 
-.menu__link:hover {
+.menu-link:hover {
 
     text-decoration: underline;
-    color: #ffffff;
     
 }
 
-.header-container {
+.header-slogan {
 
     width: 1170px;
-    display: flex;
-    margin-left: 245px;
+    height: 381px;
+    display: flex;    
+
+    position: absolute;
+    z-index: 1;
+
+    margin-top: 69px;
     margin-right: 245px;
+    margin-left: 245px;
     
-}
-
-.header__slogan {
-
-    width: 686px;
-    height: 128px;
-    justify-content: center;
-    align-items: center;
 
 }
 
-.header-title {
+.header-slogan__text {
 
+    margin: 0 260px;
     font-family: OpenSans-Bold, sans-serif;
-    font-size: 33px;
-    line-height: 40px;
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 75px;
+
     text-transform: uppercase;
     text-align: center;
-    margin: auto;
-    color: #ffffff;
+    margin-top: 84px;
+
 }
 
 /* trends */
@@ -155,7 +178,6 @@
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
-    font-weight: bold;
     text-transform: uppercase;
     color: #0f0d0e;
 
@@ -177,7 +199,7 @@
 
     opacity: 0.4;
     background-color: #ae9e5f;
-    /* margin-top: 10px; */
+   
 }
 
 .trend-posts {
@@ -230,6 +252,7 @@
 .trend-content {
 
     width: 371px;
+    box-sizing: border-box;
     border: 3px solid rgba(174,158,95,0.6);
     position: absolute;
     right: 22px;
@@ -254,7 +277,6 @@
     font-family: OpenSans-Bold, sans-serif;
     color: #ae9e5f;
     font-size: 14px;
-    font-weight: bold;
     list-style-type: none;
     text-transform: uppercase; 
 
@@ -278,12 +300,10 @@
     font-family: OpenSans-Bold, sans-serif;
     color: #ffffff;
     font-size: 20px;
-    font-weight: bold;
     line-height: 24px;
     text-transform: uppercase;
     margin-top: 11px;
     margin-bottom: 32px;
-    /* margin-right: 96px; */
     
 }
 
@@ -360,7 +380,6 @@
     font-family: OpenSans-Bold, sans-serif;
     color: #ae9e5f;
     font-size: 14px;
-    font-weight: bold;
     list-style-type: none;
     text-transform: uppercase; 
 
@@ -416,7 +435,6 @@
     font-family: OpenSans-Bold, sans-serif;
     color: #000000;
     font-size: 12px;
-    font-weight: bold;
     margin-left: 15px;
 
 }
@@ -454,7 +472,6 @@
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
-    font-weight: bold;
     text-transform: uppercase;
     position: relative;
     margin-top: 63px;
@@ -498,7 +515,7 @@
 
 .product:nth-child(n+2) {
     
-    margin-left: 60px;
+    margin-left: 65px;
 
 }
 
@@ -516,6 +533,7 @@
 
     width: 345px;
     height: 270px;
+    box-sizing: border-box;
     border: 3px solid rgba(174,158,95,0.6);
     position: absolute;
     top: 173px;
@@ -536,7 +554,6 @@
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
-    font-weight: bold;
     text-transform: uppercase;
     color: #0f0d0e;
    
@@ -553,7 +570,7 @@
 
 .product-description:hover {
 
-    font-weight: bold;
+    font-family: OpenSans-Bold;
 
 }
 
@@ -633,9 +650,9 @@
     width: 1170px;
     height: 83px;
 
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 
     background-color: #f4f7f6;
 
@@ -645,30 +662,30 @@
 
     height: 20px;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    justify-content: center; 
 
 }
 
-.socials-logo:nth-child(n+2) {
+.socials-link:nth-child(n+2) {
 
     margin-left: 30px;
 
 }
 
-.socials-links__dribbble {
+.logo-dribbble {
 
     width: 20px;
 
 }
 
-.socials-links__pinterest {
+.logo-pinterest {
 
     width: 16px;
 
 }
 
-.socials-links__tumblr {
+.logo-tumblr {
 
     width: 13px;
 
@@ -676,13 +693,20 @@
 
 .copyrights {
 
+    width: 1170px;
+    height: 130px;
+    box-sizing: border-box;
     padding-top: 74px;
     padding-bottom: 44px;
     
+}
+
+.copyrights-info {
+
     font-family: OpenSans-Bold, sans-serif;
     font-size: 12px;
-    font-weight: bold;
     color: #999999;
     text-align: center;
+    margin: 0;
 
 }
