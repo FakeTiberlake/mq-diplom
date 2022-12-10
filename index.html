@@ -196,7 +196,7 @@
                             <li class="post-tag__item">Art</li>
                         </ul>
                     </div>
-                    <h3 class="post-title">Делаем модные принты на подушках для интерьера.</h3>
+                    <h3 class="post-title">Делаем модные принты на подушках для интерьера</h3>
                 </div>
                 <div class="post-inform">
                     <div class="post-date">10 июня 2019</div>
@@ -208,10 +208,11 @@
     </section>
 
     <aside class="sidebar">
-        <div class="latest-posts">
+        <section class="latest-posts">
             <div class="latest-posts__header">Новые посты</div>
 
             <div class="latest-post">
+
                 <article class="latest-post__item">
                     <img src="images\2.jpg" alt="На берегу океана на рассвете" class="latest-post-img">
                     <div class="latest-post__info">
@@ -219,9 +220,7 @@
                         <h4 class="latest-post__name">10 мест, ради которых стоит проснуться</h4>
                     </div>  
                 </article>
-            </div>
-
-            <div class="latest-post">
+            
                 <article class="latest-post__item">
                     <img src="images\151.jpg" alt="Йога для домашних" class="latest-post-img">
                     <div class="latest-post__info">
@@ -229,19 +228,15 @@
                         <h4 class="latest-post__name">Йога для домашних</h4>
                     </div>  
                 </article>
-            </div>
-
-            <div class="latest-post">
+            
                 <article class="latest-post__item">
                     <img src="images\45.jpg" alt="Красивый и функциональный балкон без антрессолей" class="latest-post-img">
                     <div class="latest-post__info">
                         <p class="date-published">14 июня 2019</p>
-                        <h4 class="latest-post__name">Как мы превратили балкон в классное место</h4>
+                        <h4 class="latest-post__name">Как мы превратили классное место в балкон</h4>
                     </div>  
                 </article>
-            </div>
 
-            <div class="latest-post">
                 <article class="latest-post__item">
                     <img src="images\501.jpg" alt="Искусно засервированный и накрытый стол" class="latest-post-img">
                     <div class="latest-post__info">
@@ -249,9 +244,7 @@
                         <h4 class="latest-post__name">Кулинарный подход к науке</h4>
                     </div>  
                 </article>
-            </div>
 
-            <div class="latest-post">
                 <article class="latest-post__item">
                     <img src="images\7.jpg" alt="Девушки стоят спиной с длинными распущенными волосами" class="latest-post-img">
                     <div class="latest-post__info">
@@ -259,15 +252,72 @@
                         <h4 class="latest-post__name">Лучшие причёски для распущенных волос</h4>
                     </div>  
                 </article>
-            </div>
 
+        </section>
+
+
+        <div class="search">
+            <form class="search-form">
+                <label class="search-group">
+                    <input type="text" class="search-field" placeholder="Найти...">
+                </label>
+                <button type="button" class="search-button">
+                    <img src="svg\search.svg" alt="Найти" class="button-img">
+                </button>                
+            </form>           
         </div>
 
+        <div class="subscribe">
+            <div class="subscribe-title">Рассылка</div>
+            <form class="subscribe-form">
+                <label class="subscribe-group">
+                    <input type="email" class="email-field" placeholder="Ваш email-адрес">
+                    <button class="subscribe-button">Подписаться</button>
+                </label>
+            </form>
+        </div>
 
-        <div class="search"></div>
-        <div class="subscribe"></div>
-        <div class="tags"></div>
-        <div class="categories"></div>
+        <div class="tags">
+            <div class="tags-title">Теги</div>
+            <div class="tags-list">
+                <ul class="tag">
+                    <li class="tag-item">Fashion</li>
+                    <li class="tag-item">Music</li>
+                    <li class="tag-item">Lifestyle</li>
+                    <li class="tag-item">Art</li>
+                    <li class="tag-item">Interior</li>
+                    <li class="tag-item">Travel</li>
+                    <li class="tag-item">Food</li>
+                    <li class="tag-item">Health</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="categories">
+            <div class="categories-title">Темы</div>
+            <table class="categories-table">
+                <tbody>
+                    <tr class="category">
+                        <td class="category-item category-item__name ">Красота</td> <td class="category-item category-item__count">12</td>
+                    </tr>
+                    <tr class="category">
+                        <td class="category-item category-item__name">Здоровье</td> <td class="category-item category-item__count">4</td>
+                    </tr>
+                    <tr class="category">
+                        <td class="category-item category-item__name">Образ жизни</td> <td class="category-item category-item__count">145</td>
+                    </tr>
+                    <tr class="category">
+                        <td class="category-item category-item__name">Музыка</td> <td class="category-item category-item__count">28</td>
+                    </tr>
+                    <tr class="category">
+                        <td class="category-item category-item__name">Спорт</td> <td class="category-item category-item__count">62</td>
+                    </tr>
+                    <tr class="category">
+                        <td class="category-item category-item__name">Йога</td> <td class="category-item category-item__count">8</td>
+                    </tr>
+                </tbody>
+            </table>               
+        </div>
 
     </aside>
 
