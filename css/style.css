@@ -23,7 +23,180 @@
 
     width: 1660px;
     height: 3500px;
+    /* background-color: #ffffff; */
+}
 
+/* popup */
+
+.popup {
+
+    width: 390px;
+    height: 590px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    position: fixed;
+    top: 235px;
+    right: 634px;
+
+}
+
+.popup-container {
+
+    width: 390px;
+    height: 590px;
+    box-sizing: border-box;
+    /* margin: 55px 30px; */
+    background-color: #ffffff;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+
+}
+
+.popup-close {
+
+   position: absolute; 
+   top: -27px;
+   right: 0;
+
+   width: 19px;
+   height: 19px;
+
+   background: none;
+   border: none;
+
+}
+
+.popup-title {
+
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+
+    position: relative;
+    margin-bottom: 41px;
+    text-align: center;
+    
+}
+
+.popup-title:after { 
+
+    content: "";
+    width: 66px;
+    height: 3px;
+
+    position: absolute;
+    top: 28px;
+    right: 162px;
+
+    opacity: 0.4;
+    background-color: #ae9e5f;
+   
+}
+
+.frequency-title {
+
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 13px;
+    color: #0f0d0e;
+
+}
+.select {
+
+    width: 330px;
+    height: 48px;
+    margin-top: 9px;
+    border: none;
+   
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: #f5f7f6;
+    background-image: url(../svg/form-arrows.svg);
+    background-size: 9px 17px;
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+
+
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 13px;
+    color: #0f0d0e;
+
+}
+
+.select:focus {
+
+    outline: none;
+    border: 2px solid #ae9e5f;
+
+}
+
+.radio-button {
+
+    margin-top: 34px;
+}
+
+.radio-title {
+   
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 13px;
+    color: #0f0d0e;
+
+}
+
+.radio {
+    display: none;
+    
+
+}
+.radio-group {
+
+    display: inline-block;
+
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 13px;
+    color: #0f0d0e;
+    margin-top: 9px;
+
+}
+
+.radio-group:nth-of-type(n+2) {
+
+    margin-left: 36px;
+}
+
+
+.radio-group-text::before {
+
+    content: "";
+    display: inline-block;
+
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+
+    background-image: url(../svg/form-empty-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px;
+
+    vertical-align: bottom;
+
+
+
+}
+
+.radio:cheked ~.radio-group-text::after {
+
+    background-image: url(../svg/form-circle.svg);
+}
+
+.input-content {
+
+    margin-top: 33px;
 }
 
 /* header */
@@ -1008,9 +1181,11 @@ latest-post {
 .product-content {
 
     box-sizing: border-box;
+    
+    width: 300px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 57px;
+    margin-top: 54px;
         
 }
 
@@ -1020,6 +1195,8 @@ latest-post {
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
+
+    margin: 0 0 14px 0;
    
 }
 
@@ -1029,6 +1206,7 @@ latest-post {
     font-size: 15px;
     line-height: 22px;
     color: #0f0d0e;
+    margin: 0;
 
 }
 
@@ -1048,12 +1226,14 @@ latest-post {
 
     display: flex;
     justify-content: space-between;
-    margin-top: 27px;
+    align-items: center;
+    margin: 25px 0 0 0;
 }
 
 .product-prices {
     font-family: OpenSans-Bold, sans-serif;
-    top: 8px;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -1063,14 +1243,12 @@ latest-post {
     text-decoration: line-through;
     color: #161516;
 
-    margin-bottom: 5px;
 
     position: relative;
     
-
 }
 
-.product-old-price::after {
+/* .product-old-price::after {
 
     content: "";
     width: 5px;
@@ -1078,19 +1256,21 @@ latest-post {
     background-color: #161516;
 
     position: absolute;
+    top: 11px;
+    right: 0;
 
-}
+} */
 
 .product-new-price {
     
     font-size: 20px;
     color: #161516;
-    
+
     position: relative;
 
 }
 
-.product-new-price::after {
+/* .product-new-price::after {
 
     content: "";
     width: 7px;
@@ -1101,18 +1281,23 @@ latest-post {
     position: absolute;
     
 
-}
+} */
 
 .product-button {
 
     width: 140px;
     height: 50px;
     background-color: #b59f5b;
-    border-radius: none;
+    border-radius: 0;
+
     font-family: OpenSans-Bold, sans-serif;
     font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
+
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
 }
 
 
