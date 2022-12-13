@@ -32,6 +32,7 @@
 
     width: 390px;
     height: 590px;
+
     background-color: rgba(0, 0, 0, 0.6);
 
     position: fixed;
@@ -42,17 +43,14 @@
 
 .popup-container {
 
-    width: 390px;
-    height: 590px;
     box-sizing: border-box;
-    /* margin: 55px 30px; */
+    padding: 55px 30px;
     background-color: #ffffff;
 
     position: relative;
 
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start; */
 
 }
 
@@ -78,7 +76,7 @@
     color: #0f0d0e;
 
     position: relative;
-    margin-bottom: 41px;
+    margin: 0 0 41px 0;
     text-align: center;
     
 }
@@ -91,7 +89,7 @@
 
     position: absolute;
     top: 28px;
-    right: 162px;
+    right: 132px;
 
     opacity: 0.4;
     background-color: #ae9e5f;
@@ -110,6 +108,7 @@
     width: 330px;
     height: 48px;
     margin-top: 9px;
+    padding-left: 19px;
     border: none;
    
     -moz-appearance: none;
@@ -185,18 +184,81 @@
 
     vertical-align: bottom;
 
-
-
 }
 
-.radio:cheked ~.radio-group-text::after {
+.radio:checked ~.radio-group-text::before {
 
     background-image: url(../svg/form-circle.svg);
+
 }
 
 .input-content {
 
+    width: 330px;
+    height: 169px;
     margin-top: 33px;
+    margin-bottom: 25px;
+
+}
+
+.input-content-title {
+
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 13px;
+    color: #0f0d0e;
+
+}
+
+.input-content-form {
+
+    width: 330px;
+    height: 132px;
+    box-sizing: border-box;
+    display: flex;
+
+    margin-top: 12px;
+    padding: 21px 0 0 21px;
+
+    background-color: #f5f7f6;
+    border: none;
+
+}
+
+.input-content-form:focus {
+    
+    outline: none;
+    border: 2px solid #ae9e5f;
+
+}
+
+.input-content-form::placeholder {
+
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 13px;
+    color: #0f0d0e;
+    opacity: 0.54;
+    vertical-align: top;
+    
+}
+
+.popup-button {
+
+    width: 330px;
+    height: 49px;
+    background-color: #ae9e5f;
+    border: none;
+
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+
+}
+
+.popup-button:hover {
+    
+    background-color: #353535;
 }
 
 /* header */
