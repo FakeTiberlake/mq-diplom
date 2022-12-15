@@ -19,11 +19,10 @@
     font-style: normal;
 }
 
-.container {
+body {
 
-    width: 1660px;
-    height: 3500px;
-    /* background-color: #ffffff; */
+    background-color: #ffffff;
+    
 }
 
 /* popup */
