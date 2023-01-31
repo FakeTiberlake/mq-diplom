@@ -32,8 +32,8 @@ body {
     width: 100%;
     height: 450px;
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-direction: column;
+
     background-image: url(../images/banner-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -62,7 +62,7 @@ body {
 
 .header__top-panel {
 
-    width: 100%;   
+    height: 69px; 
     margin: 0 15px;
 
     display: flex;    
@@ -82,13 +82,9 @@ body {
 .header__menu {
 
     display: flex;
-    flex-wrap: wrap;
-    align-self: flex-start;
 
     margin: 45px 0 0 0;
     padding: 0;
-
-    list-style: none;
 
 }
 
@@ -122,11 +118,9 @@ body {
 
 .header__slogan {
 
-    width: 100%;
     z-index: 1;
+    margin: 92px 283px 0 283px;
 
-    margin: 125px 245px 0 245px;
-    text-align: center;
 
 }
 
@@ -135,12 +129,12 @@ body {
     font-family: OpenSans-Bold, sans-serif;
     color: #ffffff;
     font-size: 40px;
-
+    line-height: 75px;
+    margin: 0;
     text-transform: uppercase;
-
+    text-align: center; 
+/* 92px */
 }
-
-/* trends */
 
 .trends {
 
@@ -152,32 +146,32 @@ body {
 
 }
 
-.trends__title {
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 63px;
+
+}
+
+.trends__title-text {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
 
-    position: relative;
-    margin-top: 63px;
-    margin-bottom: 41px;
+    margin: 0;
     
 }
 
-.trends__title:after { 
+.line {
 
-    content: "";
     width: 67px;
     height: 3px;
+    background-color: rgba(174,158,95,0.4);
+    margin: 10px 0 28px 0;
 
-    position: absolute;
-    top: 33px;
-    right: 62px;
-
-    opacity: 0.4;
-    background-color: #ae9e5f;
-   
 }
 
 .trend__posts {
@@ -253,7 +247,7 @@ background-image: url(../images/trend3.jpg);
     margin: 0 22px 16px 18px;
     z-index: 1;
     padding: 0 40px 0 32px;
-    /* vertical-align: bottom; */
+
 }
 
 .trend__tag {
@@ -312,8 +306,6 @@ background-image: url(../images/trend3.jpg);
     color: #ae9e5f;
     
 }
-
-/* post-list */
 
 .posts {
 
@@ -461,20 +453,15 @@ background-image: url(../images/trend3.jpg);
 .sidebar {
 
     width: 270px;
-
     float: right;
-
     display: flex;
     flex-direction: column;
-
-    margin-top: 64px 125px 290px 245px;
 
 }
 
 .sidebar__latest-posts {
 
     width: 270px;
-
     margin-bottom: 60px;
 
     display: flex;
@@ -484,38 +471,19 @@ background-image: url(../images/trend3.jpg);
 
 }
 
-.sidebar__header {
+.sidebar__title-text {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 14px;
     color: #161516;
     text-transform: uppercase;
-
-    position: relative;
-
-    margin-bottom: 46px;
-
-}
-
-.sidebar__header::after {
-
-    content: "";
-    width: 66px;
-    height: 3px;
-
-    position: absolute;
-    top: 24px;
-    right: 20px;
-
-    opacity: 0.4;
-    background-color: #ae9e5f;
+    margin: 0;
 
 }
 
 .latest-post {
 
     width: 270px;
-    height: 438px;
 
 }
 
@@ -536,8 +504,6 @@ background-image: url(../images/trend3.jpg);
 
 .latest-post__img {
 
-    width: 70px;
-    height: 70px;
     background-color: #f5f7f5;
 
     margin-right: 20px;
@@ -556,8 +522,7 @@ background-image: url(../images/trend3.jpg);
 
     font-family: OpenSans-Regular, sans-serif;
     font-size: 12px;
-    color: #000000;
-    opacity: 0.54;
+    color: rgba(0, 0, 0, 0.54);
 
     margin-top: 0;
     margin-bottom: 9px;
@@ -576,11 +541,6 @@ background-image: url(../images/trend3.jpg);
 
     margin: 0;
 
-}
-
-.search {
-
-    margin-bottom: 61px;
 }
 
 .search__form {
@@ -644,8 +604,6 @@ background-image: url(../images/trend3.jpg);
 .subscribe {
 
     width: 270px;
-    height: 164px;
-    margin-bottom: 61px;
 
     display: flex;
     flex-direction: column;
@@ -653,30 +611,14 @@ background-image: url(../images/trend3.jpg);
     
 }
 
-.subscribe__title {
+.subscribe__title-text {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
-    position: relative;
-    margin-bottom: 40px;
+    margin: 0;
     color: #0f0d0e;
 
-}
-
-.subscribe__title::after {
-
-    content: "";
-    width: 66px;
-    height: 3px;
-
-    position: absolute;
-    top: 24px;
-    right: 6px;
-
-    opacity: 0.4;
-    background-color: #ae9e5f;
-    
 }
 
 .subscribe__form {
@@ -686,7 +628,7 @@ background-image: url(../images/trend3.jpg);
 
 }
 
-.email__field {
+.email-field {
 
     width: 270px;
     height: 49px;
@@ -699,14 +641,14 @@ background-image: url(../images/trend3.jpg);
 
 }
 
-.email__field:focus {
+.email-field:focus {
 
     outline: none;
     border: 2px solid #ae9e5f;
     
 }
 
-.email__field::placeholder {
+.email-field::placeholder {
 
     font-family: OpenSans-Regular, sans-serif;
     font-size: 13px;
@@ -743,34 +685,16 @@ background-image: url(../images/trend3.jpg);
     flex-direction: column;
     align-items: center;
 
-    margin-bottom: 61px;
 }
 
-.tags__title {
+.tags__title-text {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     color: #0f0d0e;
 
-    position: relative;
-
-    margin-bottom: 41px;
-    
-}
-
-.tags__title::after {
-
-    content: "";
-    width: 66px;
-    height: 3px;
-
-    position: absolute;
-    top: 24px;
-    right: -15px;
-
-    opacity: 0.4;
-    background-color: #ae9e5f;
+    margin: 0;
     
 }
 
@@ -836,87 +760,87 @@ background-image: url(../images/trend3.jpg);
 .categories {
 
     width: 270px;
-    height: 320px;
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.categories__title {
+.categories__title-text {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     color: #0f0d0e;
 
-    position: relative;
-
-    margin-bottom: 26px;
-    
-}
-
-.categories__title::after {
-
-    content: "";
-    width: 66px;
-    height: 3px;
-
-    position: absolute;
-    top: 24px;
-    right: -13px;
-
-    opacity: 0.4;
-    background-color: #ae9e5f;
+    margin: 0;
     
 }
 
 .categories__list {
    
     width: 270px;
-
+   
 }
 
 .category {
 
     width: 270px;
-    height: 48px;
     padding: 0;
     margin: 0;
-
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    border-bottom: 1px solid #ededed;
-
+    flex-direction: column;
+   
 }
 
 .category__item {
 
+    list-style-type: none;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 12px;
+    box-sizing: border-box;
+
+    display: flex;
+
+}
+
+.category__item:nth-child(n+2) {
+    
+    margin-top: 19px;
+
+}
+
+.category__item-link {
+
     font-family: OpenSans-Bold, sans-serif;
     color: #000000;
     font-size: 14px;
+    padding: 0;   
+    text-decoration: none;
+
+}
+
+.category__item-link:hover {
+
+    color: #ae9e5f;
+
+}
+
+.category__count {
 
     padding: 0;
 
 }
 
-.category__item:hover {
-
-    color: #ae9e5f;
-
-}
-
 .category__item-count {
+    
+    font-family: OpenSans-Bold, sans-serif;
     color: #ae9e5f;
     font-size: 12px;
-
-    margin-left: 5px;
-
+    list-style-type: none;
+    padding-left: 5px;
 }
 
-
-/* shop */
 
 .shop {
 
@@ -931,44 +855,33 @@ background-image: url(../images/trend3.jpg);
 
 }
 
-.shop__title {
+.shop__title-text {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
     text-transform: uppercase;
-    position: relative;
-    margin-top: 63px;
-    margin-bottom: 41px;
     color: #0f0d0e;
+    margin: 0;
     
-}
-
-.shop__title::after {
-
-    content: "";
-    width: 67px;
-    height: 3px;
-
-    position: absolute;
-    top: 33px;
-    right: 52px;
-
-    opacity: 0.4;
-    background-color: #ae9e5f;
-
 }
 
 .shop__products {
 
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
 .product {
 
     display: flex;
-    width: 440px;
-    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 348px;
+    height: 440px;
+    background-size: 300px 204px;
+    background-position: top;
+    background-repeat: no-repeat;
 
 }
 
@@ -978,37 +891,35 @@ background-image: url(../images/trend3.jpg);
 
 }
 
-.product__picture {
+.product__pillows {
+    background-image: url(../images/shop-item-desk1.jpg);
+} 
 
-    width: 300px;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    left: 23px;
+.product__dolly-bunny {
+
+    background-image: url(../images/shop-item-desk2.jpg);
+
+}
+
+.product__hexagonal-frame {
+
+    background-image: url(../images/shop-item-desk3.jpg);
 
 }
 
 .product__card {
 
-    width: 345px;
-    height: 270px;
+    width: 348px;
+    height: 267px;
     box-sizing: border-box;
     border: 3px solid rgba(174,158,95,0.6);
-    position: absolute;
-    top: 173px;
-    left: 0;
+    margin-top: 173px;
 
-}
+    padding-top: 54px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 26px;
 
-.product__content {
-
-    box-sizing: border-box;
-    
-    width: 300px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 54px;
-        
 }
 
 .product__name {
@@ -1018,7 +929,7 @@ background-image: url(../images/trend3.jpg);
     text-transform: uppercase;
     color: #0f0d0e;
 
-    margin: 0 0 14px 0;
+    margin: 0 0 8px 0;
    
 }
 
@@ -1029,7 +940,6 @@ background-image: url(../images/trend3.jpg);
     line-height: 22px;
     color: #0f0d0e;
     margin: 0;
-
 }
 
 .product__link {
@@ -1049,7 +959,7 @@ background-image: url(../images/trend3.jpg);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 25px 0 0 0;
+    margin: 26px 0;
 }
 
 .product__prices {
@@ -1094,15 +1004,12 @@ background-image: url(../images/trend3.jpg);
     box-sizing: border-box;
     padding: 0;
     border: 0;
+
 }
-
-
-/* footer */
 
 .footer {
     
-    width: 1170px;
-    height: 213px;
+    width: 100%;
 
     padding-top: 0;
     padding-bottom: 0;
@@ -1116,7 +1023,7 @@ background-image: url(../images/trend3.jpg);
 
 .socials {
 
-    width: 1170px;
+    width: 100%;
     height: 83px;
 
     display: flex;
@@ -1162,8 +1069,8 @@ background-image: url(../images/trend3.jpg);
 
 .copyrights {
 
-    width: 1170px;
-    height: 130px;
+    width: 100%;
+    /* height: 130px; */
     box-sizing: border-box;
     padding-top: 74px;
     padding-bottom: 44px;
@@ -1179,7 +1086,6 @@ background-image: url(../images/trend3.jpg);
     margin: 0;
 
 }
-
 
 .popup-container {
 
