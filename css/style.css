@@ -45,19 +45,16 @@ body {
   .header::after {
 
     content: "";  
-    background-image: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     
-    content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.6)
-
   }
 
 .header__top-panel {
@@ -133,7 +130,6 @@ body {
     margin: 0;
     text-transform: uppercase;
     text-align: center; 
-/* 92px */
 }
 
 .trends {
@@ -1007,6 +1003,12 @@ background-image: url(../images/trend3.jpg);
 
 }
 
+.product__button:hover {
+
+    background-color: #353535;
+
+}
+
 .footer {
     
     width: 100%;
@@ -1089,16 +1091,27 @@ background-image: url(../images/trend3.jpg);
 
 .popup-container {
 
-    width: 390px;
-    height: 590px;
     visibility: hidden;
 
+    position: absolute;
+    top: 238px;
+    right: 407px;
+    z-index: 100;
+
+}
+
+.popup-container::before {
+
+    content: "";
+
     background-color: rgba(0, 0, 0, 0.6);
-
+    
     position: fixed;
-    top: 235px;
-    right: 634px;
-
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    
 }
 
 .popup {
@@ -1115,31 +1128,20 @@ background-image: url(../images/trend3.jpg);
 }
 
 .popup__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.popup__title-text {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
-
-    position: relative;
-    margin: 0 0 41px 0;
-    text-align: center;
+    margin: 0;
     
-}
-
-.popup__title:after { 
-
-    content: "";
-    width: 66px;
-    height: 3px;
-
-    position: absolute;
-    top: 28px;
-    right: 132px;
-
-    opacity: 0.4;
-    background-color: #ae9e5f;
-   
 }
 
 .frequency__title {
