@@ -19,26 +19,28 @@
     font-style: normal;
 }
 
-body {
+.main-container {
 
     background-color: #ffffff;
     width: 100%;
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* max-width: 1200px; */
     margin: 0 auto;
+
 }
 
 .header {
 
     width: 100%;
-    height: 450px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     background-image: url(../images/banner-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-
     position: relative;
 }
 
@@ -59,8 +61,7 @@ body {
 
 .header__top-panel {
 
-    height: 69px; 
-    margin: 0 15px;
+    width: 1170px;
 
     display: flex;    
     justify-content: space-between;
@@ -71,7 +72,6 @@ body {
 .header__logo {
 
     width: 179px;
-    height: 41px;
     margin-top: 28px;
     
 }
@@ -115,8 +115,10 @@ body {
 
 .header__slogan {
 
+    width: 650px;
     z-index: 1;
-    margin: 92px 283px 0 283px;
+    align-self: center;
+    margin: 92px 260px 147px 260px;
 
 
 }
@@ -181,7 +183,6 @@ body {
 .trend__post {
 
     width: 412px;
-    height: 320px;
     display: flex;
 
     background-color: #606260;
@@ -240,7 +241,7 @@ background-image: url(../images/trend3.jpg);
     flex-wrap: wrap;
     align-self: flex-end;
 
-    margin: 0 22px 16px 18px;
+    margin: 134px 22px 16px 18px;
     z-index: 1;
     padding: 0 40px 0 32px;
 
@@ -303,6 +304,14 @@ background-image: url(../images/trend3.jpg);
     
 }
 
+.posts-sidebar {
+
+    width: 1170px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
 .posts {
 
     width: 760px;
@@ -338,7 +347,6 @@ background-image: url(../images/trend3.jpg);
 .post__img {
 
     width: 380px;
-    height: 295px;
     background-color: #f1f6f1;
     
 }
@@ -486,7 +494,6 @@ background-image: url(../images/trend3.jpg);
 .latest-post__item {
 
     width: 270px;
-    height: 70px;
 
     display: flex;
     
@@ -502,7 +509,7 @@ background-image: url(../images/trend3.jpg);
 
     background-color: #f5f7f5;
 
-    margin-right: 20px;
+    margin-right: 19px;
 
 }
 
@@ -532,7 +539,7 @@ background-image: url(../images/trend3.jpg);
     font-family: OpenSans-Bold, sans-serif;
     font-size: 14px;
     line-height: 18px;
-    color: 000000;
+    color: #000000;
     text-transform: uppercase;
 
     margin: 0;
@@ -592,7 +599,6 @@ background-image: url(../images/trend3.jpg);
 .search__button-img {
 
     width: 18px;
-    height: 18px;
     z-index: 0;
 
 }
@@ -710,7 +716,6 @@ background-image: url(../images/trend3.jpg);
 .tag__item {
 
     width: 86px;
-    height: 30px;
 
     box-sizing: border-box;
     display: flex;
@@ -726,6 +731,7 @@ background-image: url(../images/trend3.jpg);
 
     border: 3px solid #ededed;
     margin-left: 5px;
+    padding: 8px 0 7px 0;
 
 }
 
@@ -874,8 +880,6 @@ background-image: url(../images/trend3.jpg);
     flex-direction: column;
     align-items: center;
     width: 348px;
-    height: 440px;
-    background-size: 300px 204px;
     background-position: top;
     background-repeat: no-repeat;
 
@@ -906,7 +910,6 @@ background-image: url(../images/trend3.jpg);
 .product__card {
 
     width: 348px;
-    height: 267px;
     box-sizing: border-box;
     border: 3px solid rgba(174,158,95,0.6);
     margin-top: 173px;
@@ -1026,7 +1029,6 @@ background-image: url(../images/trend3.jpg);
 .socials {
 
     width: 100%;
-    height: 83px;
 
     display: flex;
     align-items: center;
@@ -1038,10 +1040,10 @@ background-image: url(../images/trend3.jpg);
 
 .socials__links {
 
-    height: 20px;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    margin: 31px 0; 
 
 }
 
@@ -1072,7 +1074,6 @@ background-image: url(../images/trend3.jpg);
 .copyrights {
 
     width: 100%;
-    /* height: 130px; */
     box-sizing: border-box;
     padding-top: 74px;
     padding-bottom: 44px;
@@ -1095,7 +1096,7 @@ background-image: url(../images/trend3.jpg);
 
     position: absolute;
     top: 238px;
-    right: 407px;
+    left: 560px;
     z-index: 100;
 
 }
@@ -1244,7 +1245,6 @@ background-image: url(../images/trend3.jpg);
 .input-content {
 
     width: 330px;
-    height: 169px;
     margin-top: 33px;
     margin-bottom: 25px;
 
@@ -1261,12 +1261,11 @@ background-image: url(../images/trend3.jpg);
 .input-content__form {
 
     width: 330px;
-    height: 132px;
     box-sizing: border-box;
     display: flex;
 
     margin-top: 12px;
-    padding: 21px 0 0 21px;
+    padding: 21px 0 100px 21px;
 
     background-color: #f5f7f6;
     border: none;
