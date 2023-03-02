@@ -24,10 +24,11 @@
     background-color: #ffffff;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     /* max-width: 1200px; */
     margin: 0 auto;
+    padding: 0 15px;
 
 }
 
@@ -41,6 +42,7 @@
     background-image: url(../images/banner-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
     position: relative;
 }
 
@@ -144,33 +146,29 @@
 
 }
 
-.title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 63px;
-
-}
-
 .trends__title-text {
 
     font-family: OpenSans-Bold, sans-serif;
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
+    position: relative;
 
-    margin: 0;
+    margin: 63px 0 45px 0;
     
 }
 
-.line {
+.trends__title-text::after {
 
+    content: "";
     width: 67px;
     height: 3px;
     background-color: rgba(174,158,95,0.4);
-    margin: 10px 0 28px 0;
-
+    position: absolute;
+    left: 33%;
+    bottom: -15px;
 }
+
 
 .trend__posts {
 
@@ -184,9 +182,11 @@
 
     width: calc(25% - 4px);
     display: flex;
+    box-sizing: border-box;
 
     background-color: #606260;
     position: relative;
+    background-repeat: no-repeat;
 
 }
 
@@ -204,30 +204,40 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.6)
+    background: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 
 }
 
 .window-garden {
 
     background-image: url(../images/trend1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
 .cheese-picture {
 
     background-image: url(../images/trend2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .jogging-mountain {
 
 background-image: url(../images/trend3.jpg);
-
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .fresh-lemons {
 
     background-image: url(../images/trend4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -243,7 +253,7 @@ background-image: url(../images/trend3.jpg);
 
     margin: 134px 22px 16px 18px;
     z-index: 1;
-    padding: 0 40px 0 32px;
+    padding: 38px 40px 38px 32px;
 
 }
 
@@ -251,7 +261,7 @@ background-image: url(../images/trend3.jpg);
      
     display: flex;
     justify-content: start;
-    margin: 38px 0 0 0;
+    margin-bottom: 16px;
     padding: 0;
 
 }
@@ -284,6 +294,11 @@ background-image: url(../images/trend3.jpg);
     text-decoration: underline;
     
 }
+.trend__name {
+
+    margin: 0;
+
+}
 
 .trend__name-link {
 
@@ -291,7 +306,7 @@ background-image: url(../images/trend3.jpg);
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
-    margin: 11px 0 32px 0;
+    margin: 0;
 
     text-decoration: none;
     color: #ffffff;
@@ -302,14 +317,6 @@ background-image: url(../images/trend3.jpg);
 
     color: #ae9e5f;
     
-}
-
-.posts-sidebar {
-
-    width: 1170px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
 }
 
 .posts {
@@ -346,7 +353,7 @@ background-image: url(../images/trend3.jpg);
 
 .post__img {
 
-    width: 380px;
+    width: 381px;
     background-color: #f1f6f1;
     
 }
@@ -482,7 +489,20 @@ background-image: url(../images/trend3.jpg);
     font-size: 14px;
     color: #161516;
     text-transform: uppercase;
-    margin: 0;
+    margin: 64px 0 45px 0;
+    position: relative;
+
+}
+
+.sidebar__title-text::after {
+
+    content: "";
+    width: 67px;
+    height: 3px;
+    background-color: rgba(174,158,95,0.4);
+    position: absolute;
+    left: 20%;
+    bottom: -15px;
 
 }
 
@@ -508,6 +528,7 @@ background-image: url(../images/trend3.jpg);
 
 .latest-post__img {
 
+    width: 70px;
     background-color: #f5f7f5;
 
     margin-right: 19px;
@@ -621,6 +642,20 @@ background-image: url(../images/trend3.jpg);
     text-transform: uppercase;
     margin: 0;
     color: #0f0d0e;
+    margin: 64px 0 45px 0;
+    position: relative;
+
+}
+
+.subscribe__title-text::after {
+
+    content: "";
+    width: 67px;
+    height: 3px;
+    background-color: rgba(174,158,95,0.4);
+    position: absolute;
+    left: 10%;
+    bottom: -15px;
 
 }
 
@@ -696,9 +731,21 @@ background-image: url(../images/trend3.jpg);
     font-size: 14px;
     text-transform: uppercase;
     color: #0f0d0e;
+    margin: 64px 0 45px 0;
+    position: relative;
 
-    margin: 0;
-    
+}
+
+.tags__title-text::after {
+
+    content: "";
+    width: 67px;
+    height: 3px;
+    background-color: rgba(174,158,95,0.4);
+    position: absolute;
+    left: -38%;
+    bottom: -15px;
+
 }
 
 .tag {
@@ -775,9 +822,21 @@ background-image: url(../images/trend3.jpg);
     font-size: 14px;
     text-transform: uppercase;
     color: #0f0d0e;
+    margin: 64px 0 45px 0;
+    position: relative;
 
-    margin: 0;
-    
+}
+
+.categories__title-text::after {
+
+    content: "";
+    width: 67px;
+    height: 3px;
+    background-color: rgba(174,158,95,0.4);
+    position: absolute;
+    left: -27%;
+    bottom: -15px;
+
 }
 
 .categories__list {
@@ -855,8 +914,6 @@ background-image: url(../images/trend3.jpg);
     justify-content: center;
     margin: 0 auto;
 
-    
-
 }
 
 .shop__title-text {
@@ -865,8 +922,21 @@ background-image: url(../images/trend3.jpg);
     font-size: 20px;
     text-transform: uppercase;
     color: #0f0d0e;
-    margin: 0;
-    
+    margin: 64px 0 45px 0;
+    position: relative;
+
+}
+
+.shop__title-text::after {
+
+    content: "";
+    width: 67px;
+    height: 3px;
+    background-color: rgba(174,158,95,0.4);
+    position: absolute;
+    left: 30%;
+    bottom: -15px;
+
 }
 
 .shop__products {
@@ -894,48 +964,37 @@ background-image: url(../images/trend3.jpg);
 
 .product__pillows {
     background-image: url(../images/shop-item-desk1.jpg);
-} 
+    background-size: 300px auto;
+    background-repeat: no-repeat;
+}
 
 .product__dolly-bunny {
 
     background-image: url(../images/shop-item-desk2.jpg);
+    background-size: 300px auto;
+    background-repeat: no-repeat;
 
 }
 
 .product__hexagonal-frame {
 
     background-image: url(../images/shop-item-desk3.jpg);
+    background-size: 300px auto;
+    background-repeat: no-repeat;
 
 }
 
 .product__card {
 
     width: 348px;
+    height: 100%;
     box-sizing: border-box;
     border: 3px solid rgba(174,158,95,0.6);
+    
     margin-top: 173px;
-
-    padding-top: 54px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 54px 20px 26px 20px;
 
 }
-    .card__pillows {
-
-        padding-bottom: 69px;
-
-    }
-
-    .card__dolly-bunny {
-
-        padding-bottom: 26px;
-
-    }
-
-    .card__hexagonal-frame {
-
-        padding-bottom: 47px;
-    }
 
 
 .product__name {
@@ -973,8 +1032,8 @@ background-image: url(../images/trend3.jpg);
 .product__footer {
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content:space-between;
     margin-top: 26px;
 }
 
