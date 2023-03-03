@@ -1173,7 +1173,7 @@
 
 .popup-container {
 
-    /* visibility: hidden; */
+    visibility: hidden;
 
     position: absolute;
     top: 238px;
